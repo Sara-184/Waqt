@@ -21,6 +21,13 @@
   --ink: #1A1715;
   --scale-silver: #D5DFDE;
 
+  /* Template Theme System (Dineout / Coastal Template) */
+  --template-gold: #E5A93C;
+  --template-gold-hover: #D4962B;
+  --template-gold-light: #FFF8E7;
+  --template-dark: #0D1315;
+  --template-dark-card: #151D20;
+
   /* Status Colors */
   --status-available: #1D6F42;
   --status-available-bg: #E8F5E9;

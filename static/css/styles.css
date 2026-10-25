@@ -21,15 +21,18 @@ a {
   width: 10px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--shell);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--driftwood);
   border-radius: 5px;
   border: 2px solid var(--shell);
   transition: background 0.3s ease;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--deep-tide);
 }
@@ -42,7 +45,7 @@ a {
   height: 4px;
   background: var(--turmeric);
   z-index: 9999;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   transition: width 0.05s ease-out;
 }
 
@@ -211,8 +214,13 @@ a {
 }
 
 @keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* --- Hero Section --- */
@@ -435,9 +443,17 @@ a {
 }
 
 @keyframes pulseCall {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* --- Table Floor Grid --- */
@@ -506,7 +522,9 @@ a {
   letter-spacing: 0.03em;
 }
 
-.form-input, .form-select, .form-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   width: 100%;
   padding: 12px 16px;
   border: var(--border-subtle);
@@ -518,7 +536,9 @@ a {
   transition: border-color 0.2s ease;
 }
 
-.form-input:focus, .form-select:focus, .form-textarea:focus {
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
   outline: none;
   border-color: var(--deep-tide);
   box-shadow: 0 0 0 3px rgba(15, 44, 45, 0.08);
@@ -567,10 +587,29 @@ a {
   gap: 10px;
 }
 
-.alert-success { background: #E8F5E9; color: #1B5E20; border: 1px solid #C8E6C9; }
-.alert-error { background: #FFEBEE; color: #B71C1C; border: 1px solid #FFCDD2; }
-.alert-warning { background: #FFF8E1; color: #F57F17; border: 1px solid #FFECB3; }
-.alert-info { background: #E0F2F1; color: #004D40; border: 1px solid #B2DFDB; }
+.alert-success {
+  background: #E8F5E9;
+  color: #1B5E20;
+  border: 1px solid #C8E6C9;
+}
+
+.alert-error {
+  background: #FFEBEE;
+  color: #B71C1C;
+  border: 1px solid #FFCDD2;
+}
+
+.alert-warning {
+  background: #FFF8E1;
+  color: #F57F17;
+  border: 1px solid #FFECB3;
+}
+
+.alert-info {
+  background: #E0F2F1;
+  color: #004D40;
+  border: 1px solid #B2DFDB;
+}
 
 /* --- Footer --- */
 .waqt-footer {
@@ -598,12 +637,460 @@ a {
 
 /* --- Responsive Utilities --- */
 @media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-headline { font-size: 40px; }
-  .navbar-inner { height: 70px; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .hero-headline {
+    font-size: 40px;
+  }
+
+  .navbar-inner {
+    height: 70px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Template Design System Enhancements (Inspired by Dineout Coastal Template)
+   ========================================================================== */
+
+/* Navbar Brand & Sign In Button */
+.brand-dineout-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--template-gold);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.btn-signin-gold {
+  background: var(--template-gold);
+  color: #1a1715 !important;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 22px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(229, 169, 60, 0.25);
+}
+
+.btn-signin-gold:hover {
+  background: var(--template-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.4);
+}
+
+/* Hero Section with Coastal Dark Template Aesthetic */
+.hero-template-wrap {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 80px 0 95px 0;
+  overflow: hidden;
+}
+
+.hero-template-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 19, 21, 0.72) 0%, rgba(13, 19, 21, 0.88) 100%);
+  pointer-events: none;
+}
+
+.hero-template-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-catch-title {
+  font-family: var(--font-serif);
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-catch-title span {
+  color: var(--template-gold);
+}
+
+.hero-catch-subhead {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.hero-template-btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-outline {
+  border: 1.5px solid var(--template-gold);
+  color: var(--template-gold);
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-hero-outline:hover {
+  background: rgba(229, 169, 60, 0.18);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-hero-glass {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-hero-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Floating White Booking/Search Bar from Template */
+.template-search-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 20px 14px 28px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.search-card-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-right: 1px solid #eaeaea;
+  padding-right: 16px;
+}
+
+.search-card-col:last-of-type {
+  border-right: none;
+  padding-right: 0;
+}
+
+.search-col-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.search-col-select {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1715;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  width: 100%;
+}
+
+.btn-find-table {
+  background: var(--template-gold);
+  color: #1a1715;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 34px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(229, 169, 60, 0.3);
+}
+
+.btn-find-table:hover {
+  background: var(--template-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(229, 169, 60, 0.45);
+}
+
+/* "Popular Near You" Section (Dark theme with Template Cards) */
+.template-popular-section {
+  background: #0D1315;
+  padding: 80px 0 90px 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.popular-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.popular-headline {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.popular-view-all {
+  color: var(--template-gold);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popular-view-all:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.template-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.template-restaurant-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.template-restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55);
+}
+
+.template-card-img-wrap {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.template-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  display: block;
+}
+
+.template-restaurant-card:hover .template-card-img {
+  transform: scale(1.04);
+}
+
+.template-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: #1a1715;
+}
+
+.template-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.template-card-name {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1715;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.template-card-score {
+  background: var(--template-gold);
+  color: #1a1715;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.template-card-cuisine {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.template-card-distance {
+  font-size: 13px;
+  color: #888888;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.template-card-live-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #1d6f42;
+  background: #e8f5e9;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.btn-template-book {
+  background: var(--template-gold);
+  color: #1a1715;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 13px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-template-book:hover {
+  background: var(--template-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(229, 169, 60, 0.4);
+}
+
+.template-footer-strap {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  margin-top: 50px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments for template components */
+@media (max-width: 992px) {
+  .template-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .template-search-card {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+  }
+
+  .search-card-col {
+    border-right: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+
+  .btn-find-table {
+    grid-column: span 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-catch-title {
+    font-size: 38px;
+  }
+
+  .template-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-search-card {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-find-table {
+    grid-column: span 1;
+  }
 }
